@@ -5,6 +5,8 @@ import './style.css';
 
 
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +35,12 @@ this.setState({
   List,
   newItem:""
 })
+if((document.getElementById("textTodo").value)<=0){
+  alert("Please enter something");
+  value:List.pop(newItem)
+
+
+}
 }
 
 deleteItem(id){
@@ -43,16 +51,18 @@ this.setState({List:updatedList});
 
   render() {
     return (
+      
       <div className="App">
+
       <div>
          <div className="addIt"> Add an Item</div>
           <br/>
           <div id="centerEle">
-          <input type='text' id="textTodo" placeholder="type anything....." 
+          <input required type='text' id="textTodo" placeholder="type anything....."
           value={this.state.newItem}
-          onChange={e => this.updateInput("newItem",e.target.value)} required/>
+          onChange={e => this.updateInput("newItem",e.target.value)}/>
           <button id='btnAdd'
-          onClick={()=>this.addItem()}
+          onClick={()=>this.addItem() }
           >
           ADD
           </button>
