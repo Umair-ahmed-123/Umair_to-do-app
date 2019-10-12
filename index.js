@@ -38,9 +38,9 @@ this.setState({
   List,
   newItem:""
 })
- var htmlContents = document.documentElement.innerHTML;
-localStorage.setItem('myBook', JSON.stringify(htmlContents ));  
-localStorage.getItem("myBook");
+//  var htmlContents = document.documentElement.innerHTML;
+// localStorage.setItem('myBook', JSON.stringify(htmlContents ));  
+// localStorage.getItem("myBook");
 if((document.getElementById("textTodo").value)<=0){
   alert("Please enter something");
   value:List.pop(newItem)
@@ -71,7 +71,7 @@ this.setState({List:updatedList});
           <button id='btnAdd'
           onClick={()=>this.addItem() }
           >
-          ADD
+          Click Here
           </button>
           <br/>
           <ul>

@@ -6,16 +6,16 @@
   padding: 10px;
   text-transform: uppercase;
  background-color: #e91e63;
-
 }
 
 #btnAdd{
 color: white;
 background: #e91e63;
-
+margin-top: 1%;
 font-size: 24px;
 box-shadow:aqua;
-
+font-weight: bold;
+border-radius: 20px 0px 20px 0px;
 font-family: 'Courier New', Courier, monospace;
 
 
@@ -30,6 +30,7 @@ font-family: 'Courier New', Courier, monospace;
   background-color: #ddd;
   width: 100%;
   font-size: 24px;
+  padding: 10px;
   border:none;
   text-transform: uppercase;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
