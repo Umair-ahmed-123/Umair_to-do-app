@@ -15,7 +15,10 @@ class App extends Component {
       List:[]
     }
   }
-
+// focusFunction() {
+//   // Focus = Changes the background color of input to yellow
+//   document.getElementById("textTodo").style.background = "yellow";
+// }
 updateInput(key, value){
 
 this.setState({
@@ -35,6 +38,9 @@ this.setState({
   List,
   newItem:""
 })
+ var htmlContents = document.documentElement.innerHTML;
+localStorage.setItem('myBook', JSON.stringify(htmlContents ));  
+localStorage.getItem("myBook");
 if((document.getElementById("textTodo").value)<=0){
   alert("Please enter something");
   value:List.pop(newItem)
@@ -47,6 +53,7 @@ deleteItem(id){
 const List=[...this.state.List];
 const updatedList=List.filter(item=>item.id!==id);
 this.setState({List:updatedList});
+
 }
 
   render() {
@@ -68,6 +75,7 @@ this.setState({List:updatedList});
           </button>
           <br/>
           <ul>
+          
           {this.state.List.map(item=>{
               return(
                 <li key={item.id}>
