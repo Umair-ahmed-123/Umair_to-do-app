@@ -4,6 +4,7 @@ import App from './App';
 import './style.css';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -39,17 +40,18 @@ const List=[...this.state.List];
 const updatedList=List.filter(item=>item.id!==id);
 this.setState({List:updatedList});
 }
+
   render() {
     return (
       <div className="App">
       <div>
-         <div className="addIt"> Add an Item....</div>
+         <div className="addIt"> Add an Item</div>
           <br/>
-          <input 
-          type='text' placeholder="type anything....."
+          <div id="centerEle">
+          <input type='text' id="textTodo" placeholder="type anything....." 
           value={this.state.newItem}
-          onChange={e => this.updateInput("newItem",e.target.value)}/>
-          <button
+          onChange={e => this.updateInput("newItem",e.target.value)} required/>
+          <button id='btnAdd'
           onClick={()=>this.addItem()}
           >
           ADD
@@ -60,7 +62,7 @@ this.setState({List:updatedList});
               return(
                 <li key={item.id}>
                 {item.value}
-                <button onClick={()=>this.deleteItem(item.id)}
+                <button id="cancelBtn" onClick={()=>this.deleteItem(item.id)}
                 >X</button>
                 </li>
               )
@@ -68,6 +70,7 @@ this.setState({List:updatedList});
           </ul>
         </div>        
         
+      </div>
       </div>
     );
   }

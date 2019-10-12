@@ -1,6 +1,54 @@
 .addIt {
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
-  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
  background-color: #e91e63;
+
+}
+
+#btnAdd{
+color: white;
+background: #e91e63;
+display: inline;
+font-size: 24px;
+border-radius: 33%;
+  font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+#centerEle{
+  text-align: center;
+  font-size: 24px;
+}
+
+#textTodo{
+  background-color: #ddd;
+  width: 100%;
+  font-size: 24px;
+  border:none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body ul{
+  margin: 0;
+  padding: 15px;
+}
+
+body ul li{
+  list-style: none;
+  padding: 5px;
+  margin-bottom:10px;
+  background-color:#ddd;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#cancelBtn{
+  cursor: pointer;
+float: right;
+font-weight: 500px;
+  font-family: 'Courier New', Courier, monospace;
 }
